@@ -91,7 +91,7 @@ a {
     font-family: sans-serif;
     height: 100vh;
     width: 60vw;
-    background-color: #E5E7EB;
+    background-color: rgba(229, 231, 235, 0.5);
     font-size:large;
     font-weight: 600;
     display: flex;
@@ -100,21 +100,86 @@ a {
 
 .top {
     height: 33vh;  
-    width: 60vw;  
+    width: calc(60vw-40px);  
     display: flex;
     flex-direction: column;
     align-items: flex-start; 
+    padding: 40px;
 }
 
-.top.text{
+p{
     margin-top: auto;
+    margin-bottom: 0;
 }
+
+.top > p + p{
+    margin-top: 0;
+    margin-bottom: 5vh;
+}
+
+.top > p + p + p{
+    margin-top: 0;
+    margin-bottom: 0vh;
+}
+
 .middle {
     height: 33vh;  
-    width: 60vw;    
+    width: calc(60vw-40px);    
+    background-color: white;
+    box-shadow: 1px 1px 3px 1px lightgray;
+    padding: 40px;
+    padding-top:20px;
+}
+
+.middle > p{
+    margin-bottom: 20px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.row {
+    display: flex;
+    gap: 100px;
+    
+}
+.query{
+    display: flex;
+    flex-direction: column;
+    font-size: x-small;
+    color: rgb(0, 0, 0, .7);
+    letter-spacing: 2.5px;
+    width: 250px;
+}
+input {
+    height: 20px;
 }
 
 .bottom {
     height: 33vh;  
-    width: 60vw;    
+    width: calc(60vw-40px);  
+    padding: 40px;  
 }
+
+button[type="submit"]{
+    background-color: rgb(63, 111, 63);
+    height: 50px;
+    width: 225px;
+    border-radius: 7px;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    border: 0;
+}
+
+.login {
+    font-size: 17px;
+    font-weight: 500;
+    padding-top: 30px;
+}
+
+.colored-text {
+    color: rgb(63, 111, 63); /* Set the desired color */
+  }
