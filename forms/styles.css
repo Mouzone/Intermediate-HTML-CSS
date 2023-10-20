@@ -93,7 +93,7 @@ a {
     width: 60vw;
     background-color: rgba(229, 231, 235, 0.5);
     font-size:large;
-    font-weight: 600;
+    font-weight: 500;
     display: flex;
     flex-direction: column;
 }
@@ -122,29 +122,38 @@ p{
     margin-bottom: 0vh;
 }
 
-.middle {
-    height: 33vh;  
-    width: calc(60vw-40px);    
-    background-color: white;
-    box-shadow: 1px 1px 3px 1px lightgray;
-    padding: 40px;
-    padding-top:20px;
-}
-
-.middle > p{
-    margin-bottom: 20px;
-}
 form {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    height: 67vh;
+}
+
+.middle > p{
+    margin: 0;
+}
+.middle {
+    height: 230px;  
+    width: calc(60vw - 2.5vw);    
+    background-color: white;
+    box-shadow: 1px 1px 3px 1px lightgray;
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    padding-left: 2.5vw;
+}
+
+.questions {
+    padding-top: 25px;
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
 }
 
 .row {
     display: flex;
     gap: 100px;
-    
 }
+
 .query{
     display: flex;
     flex-direction: column;
@@ -157,10 +166,20 @@ input {
     height: 20px;
 }
 
-.bottom {
-    height: 33vh;  
-    width: calc(60vw-40px);  
-    padding: 40px;  
+.invalid {
+    border: 1px solid red;
+}
+
+input[type="email"]:invalid + .error-message,
+input[type="tel"]:invalid + .error-message,
+input[type="user_password"]:invalid + .error-message{
+    color: red;
+}
+
+.finalize {
+    margin: 0;
+    padding-top: 30px;
+    padding-left: 2.7vw
 }
 
 button[type="submit"]{
